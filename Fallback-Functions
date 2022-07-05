@@ -1,0 +1,14 @@
+contract FallbackContract {
+uint public x;
+fallback() external { x ++; }
+}
+//^^The fallback function is invoked when no other function is matched and must be defined as external^^//
+
+contract Invoker {
+function callFallback(FallbackContract test) public {
+(bool success,) =
+address(test).call(abi.encodeWithSignatur("nonExistingFunction()"));
+require(success);
+//Results in test.x becoming ==1
+}
+}
