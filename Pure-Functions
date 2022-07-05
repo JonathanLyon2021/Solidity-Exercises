@@ -1,0 +1,9 @@
+contract PureFunctions {
+function ethToWei(uint eth) pure public returns (uint) {
+return eth * 1000000000000000000;
+}
+function calcTriangleArea(
+int width, int height) pure public returns (int) {
+return width * height / 2;
+}
+}
