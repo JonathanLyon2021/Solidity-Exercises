@@ -1,0 +1,10 @@
+contract EventsExample {
+event Sum(address addr, uint a, uint b);
+
+function sum(uint a, uint b) public returns (uint) {
+  emit Sum(msg.sender, a, b);
+  //Invoke the event to log its arguments//
+  
+  return a + b;
+  }
+  }
