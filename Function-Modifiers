@@ -1,0 +1,17 @@
+contract ChangeableOwner {
+address public owner = msg.sender;
+
+//Define a modifier attacheable to any other function//
+
+modifier onlyOwner(address account) {
+require(msg.sender == account);
+_;
+
+//Don't forget to invoke the original function's body!//
+}
+
+function changeOwner(address newOwner) public onlyOwner(owner) {
+owner = newOwner;
+//Modifiers inject functionality before & after a function call//
+}
+}
