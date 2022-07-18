@@ -40,3 +40,9 @@ contract StorageLocation {
         person.age = 56;                   //the storaage location in this particular function.
         //At the termination of the function the persons storage variable remains the same because the data in memory has be wiped off.
     }
+
+     function changeDataTwo() public {
+        Person storage person = persons[0]; //To persist the changes we make in a dynamic data type 
+         person.age = 76;                   //we must reference the storage location of that variable.
+        
+    }
