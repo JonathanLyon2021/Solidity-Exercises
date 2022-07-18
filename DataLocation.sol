@@ -34,3 +34,9 @@ contract StorageLocation {
     function loadPerson() public view returns ( Person[] memory ){
         return persons;
     }
+
+    function changeDataone() public view {  //Creates a variable named person and saved it to memory.
+        Person memory person = persons[0]; //We can not change person.age bc we are not referencing 
+        person.age = 56;                   //the storaage location in this particular function.
+        //At the termination of the function the persons storage variable remains the same because the data in memory has be wiped off.
+    }
