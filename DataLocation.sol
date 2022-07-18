@@ -28,6 +28,9 @@ contract StorageLocation {
        
        persons.push(newperson); // newperson was pushed into this persons array for permanent storage. 
                                 //The temporary newperson variable in memory will be discarded.
-       persons.push(personTwo);
-   
+       persons.push(personTwo);  
    }
+   
+    function loadPerson() public view returns ( Person[] memory ){
+        return persons;
+    }
