@@ -12,5 +12,12 @@ contract StorageLocation {
         address personAddress;
     }
    
+    /* newperson(line 16) is saved in memory & will be destroyed after the constructor function has finished running.*/
+    constructor() {
+       Person memory newperson = Person({   
+           name: "Jonathan",
+           age: 36,
+           personAddress: msg.sender
+       });
    
    }
