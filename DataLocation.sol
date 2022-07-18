@@ -46,3 +46,8 @@ contract StorageLocation {
          person.age = 76;                   //we must reference the storage location of that variable.
         
     }
+    
+    function receiveAsCallData(uint256[] calldata a) public {
+        //you can not modify a
+    }
+}
