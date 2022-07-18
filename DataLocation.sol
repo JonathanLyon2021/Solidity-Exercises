@@ -25,5 +25,9 @@ contract StorageLocation {
            age: 37,
            personAddress: msg.sender
        });
+       
+       persons.push(newperson); // newperson was pushed into this persons array for permanent storage. 
+                                //The temporary newperson variable in memory will be discarded.
+       persons.push(personTwo);
    
    }
