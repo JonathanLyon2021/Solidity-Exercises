@@ -19,5 +19,11 @@ contract StorageLocation {
            age: 36,
            personAddress: msg.sender
        });
+       
+       Person memory personTwo = Person({
+           name: "Jon Boy",
+           age: 37,
+           personAddress: msg.sender
+       });
    
    }
