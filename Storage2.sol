@@ -7,5 +7,8 @@ contract Storage2 {
   uint256 number;
 
 
+      function store(uint256 num) public {
+               number = num;
+      }
 
 }
