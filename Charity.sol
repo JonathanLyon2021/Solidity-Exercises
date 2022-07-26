@@ -7,3 +7,12 @@ contract Charity {
         donations[user] += msg.value;
     }
 }
+
+contract Receiver {
+    event ValueReceived(address user, uint amount);
+    function() external payable {
+        emit ValueReceived(msg.sender, msg.value);
+    }
+}
+
+
