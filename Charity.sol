@@ -15,4 +15,8 @@ contract Receiver {
     }
 }
 
+contract CharitySplitter {
+}
+
+
 
