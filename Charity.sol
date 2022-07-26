@@ -1,0 +1,9 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.6.0;
+
+contract Charity {
+    mapping (address => uint256) public donations;
+    function processDonation(address user) external payable {
+        donations[user] += msg.value;
+    }
+}
