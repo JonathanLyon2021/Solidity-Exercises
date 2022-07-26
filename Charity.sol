@@ -16,6 +16,9 @@ contract Receiver {
 }
 
 contract CharitySplitter {
+  function donate(Charity charity) external payable {
+        charity.processDonation.value(msg.value)(msg.sender);
+    }
 }
 
 
