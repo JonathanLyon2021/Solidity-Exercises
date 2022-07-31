@@ -16,4 +16,8 @@ contract MyContract {
         //"value" is the same variable that is on line 6, which is always a string.
     }
     
+     function set(string _value) public {
+        value = _value;
+    }
+       
 }
