@@ -41,3 +41,10 @@ function method_2(address _address, uint _age, string _first_name, string _last_
     instructorAccounts.push(_address) — 1;
 }
 
+
+// 3) The shorter way
+function method_3(address _address, uint _age, string _first_name, string _last_name) {
+    
+    instructors[_address] = Instructor(_age, _first_name, _last_name);
+    instructorAccounts.push(_address) — 1;
+}
